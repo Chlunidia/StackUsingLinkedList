@@ -15,6 +15,10 @@ namespace StackUsingLinkedList_CSharp
 
     class Stack
     {
-        
+        Node top;
+        public Stacks()
+        {
+
+        }
     }
 }
