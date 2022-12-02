@@ -18,7 +18,18 @@ namespace StackUsingLinkedList_CSharp
         Node top;
         public Stacks()
         {
-
+            Node top;
+            public Stacks()
+            {
+                top = null;
+            }
+            bool empty()
+            {
+                if (top == null)
+                    return (true);
+                else
+                    return (false);
+            }
         }
     }
 }
