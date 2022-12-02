@@ -44,7 +44,18 @@ namespace StackUsingLinkedList_CSharp
         }
         public void display()
         {
-            
+            Node tmp;
+            if (empty()) //If stack is empty
+                Console.WriteLine("\nStack empty");
+            else
+            {
+                //Traverse the list from beginning till end
+                for (tmp = top; tmp != null; tmp = tmp.next)
+                {
+                    Console.WriteLine(tmp.info);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
