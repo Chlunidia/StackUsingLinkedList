@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace StackUsingLinkedList_CSharp
 {
@@ -13,23 +14,28 @@ namespace StackUsingLinkedList_CSharp
         }
     }
 
-    class Stack
+    class Stacks
     {
         Node top;
+
         public Stacks()
         {
-            Node top;
-            public Stacks()
-            {
-                top = null;
-            }
-            bool empty()
-            {
-                if (top == null)
-                    return (true);
-                else
-                    return (false);
-            }
+            top = null;
+        }
+        bool empty()
+        {
+            if (top == null)
+                return (true);
+            else
+                return (false);
+        }
+        public void push(int element)
+        {
+            Node fresh;
+            fresh = new Node(element, null);
+            fresh.next = top;
+            top = fresh;
+            Console.WriteLine("\n" + element + " pushed.");
         }
     }
 }
